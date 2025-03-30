@@ -17,8 +17,7 @@ const Talk = () => {
         >
             <h1 className="text-black dark:text-white font-bold text-3xl mb-3 mt-8">Let's chat 💬</h1>
             <p className="text-gray-800 dark:text-gray-200 mb-6">
-                Have an inquiry, or want to connect? Feel free to leave a message below, or get in touch via Discord,
-                Twitter, or email.
+                Have an inquiry, or want to connect? Feel free to leave a message below, or get in touch via Discord, or email.
             </p>
 
             <TimeStatus />
@@ -28,23 +27,16 @@ const Talk = () => {
 
                 <div className="row-start-1 md:row-auto">
                     <ContactLink
-                        name="@cnrad"
+                        name="@bitress"
                         icon={<SiDiscord className="w-6 h-6 text-[#5865F2]" />}
-                        link="https://discord.com/users/705665813994012695"
+                        link="https://discord.com/users/712983261684432897"
                         borderColor="hover:border-[#5865F2]/50"
                     />
 
                     <ContactLink
-                        name="@notcnrad"
-                        icon={<SiTwitter className="w-6 h-6 text-[#1DA1F2]" />}
-                        link="https://twitter.com/notcnrad"
-                        borderColor="hover:border-[#1DA1F2]/50"
-                    />
-
-                    <ContactLink
-                        name="hello@cnrad.dev"
+                        name="cyannejustinvega@pm.me"
                         icon={<FiMail className="w-6 h-6 text-gray-400" />}
-                        link="mailto:hello@cnrad.dev"
+                        link="mailto:cyannejustinvega@pm.me"
                         borderColor="hover:border-gray-400/50"
                     />
                 </div>

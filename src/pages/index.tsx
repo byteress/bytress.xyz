@@ -17,6 +17,17 @@ import {
     SiJavascript,
     SiPython,
     SiPrisma,
+    SiPhp,
+    SiMariadb,
+    SiGnubash,
+    SiFlask,
+    SiLaravel,
+    SiJquery,
+    SiLivewire,
+    SiBootstrap,
+    SiLinux,
+    SiHtml5,
+    SiRaspberrypi,
 } from "react-icons/si";
 import { TechItem } from "../components/TechItem";
 import RepoItem from "../components/RepoItem";
@@ -35,19 +46,14 @@ const Index = ({ stats, topRepos }: AppProps) => {
             transition={{ ease: "easeOut", duration: 0.15 }}
             className="mt-24 w-full mb-32"
         >
-            <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Conrad 👋</h1>
+            <h1 className="mt-36 font-bold text-4xl md:text-5xl mb-4">Hey, I'm Cyanne Justin Vega 👋</h1>
             <p className="text-gray-800 dark:text-gray-300 leading-6 tracking-wide mb-12">
-                I'm a self-taught software engineer from the United States. I'm currently pursuing full-stack web
-                development to create stunning user experiences on the front-end, and scalable and secure infrastructure
-                on the backend.
-            </p>
+            I am a 22-year-old Information Technology student specializing in web development. I consider myself to have an intermediate level of knowledge and expertise in this field. I envision myself becoming an excellent web developer.            </p>
 
             <h2 className="font-medium text-3xl mb-4">What I Do 💭</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-12">
-                I'm passionate about everything in technology; from designing and developing software, to understanding
-                how the many moving parts of the internet work together, to cybersecurity, programming, and so much
-                more. I strive to learn more about these things every day, and utilize my knowledge to further
-                understand <i>how</i> or <i>why</i> the technology around us works.
+            I'm passionate about technology, particularly in IoT, machine learning, and software development. From designing and building smart systems to integrating AI-driven solutions, I enjoy exploring how hardware and software interact to solve real-world problems.
+            Beyond my projects, I'm constantly learning—whether it is backend systems, or embedded programming—to better understand how and why technology works the way it does.
             </p>
 
             <h2 className="font-medium text-3xl mb-4">Technologies 💻</h2>
@@ -57,30 +63,29 @@ const Index = ({ stats, topRepos }: AppProps) => {
                 use currently.
             </p>
             <div className="w-full flex flex-wrap flex-row justify-center p-1 border border-slate-800 rounded-md bg-white/10 dark:bg-black/10 mb-12">
-                <TechItem icon={SiTypescript} name="TypeScript" />
+                <TechItem icon={SiPhp} name="PHP" />
+                <TechItem icon={SiJavascript} name="JavaScript" />
                 <TechItem icon={SiVisualstudiocode} name="VSCode" />
                 <TechItem icon={SiReact} name="React.js" />
-                <TechItem icon={SiNodeJs} name="Node.js" />
-                <TechItem icon={SiJavascript} name="JavaScript" />
-                <TechItem icon={SiYarn} name="Yarn" />
-                <TechItem icon={SiNextJs} name="Next.js" />
-                <TechItem icon={SiTailwindCSS} name="TailwindCSS" />
-                <TechItem icon={SiStyledComponents} name="styled-components" />
-                <TechItem icon={SiPrisma} name="Prisma" />
-                <TechItem icon={SiRedis} name="Redis" />
-                <TechItem icon={SiPostgresql} name="Postgres" />
                 <TechItem icon={SiGit} name="Git" />
                 <TechItem icon={SiPython} name="Python" />
-                <TechItem icon={SiRust} name="Rust" />
-                <TechItem icon={SiDocker} name="Docker" />
-                <TechItem icon={SiSwift} name="Swift" />
+                <TechItem icon={SiMariadb} name="MariaDB" />
+                <TechItem icon={SiGnubash} name="Bash" />
+                <TechItem icon={SiFlask} name="Flask" />
+                <TechItem icon={SiLaravel} name="Laravel" />
+                <TechItem icon={SiJquery} name="JQuery" />
+                <TechItem icon={SiLivewire} name="Livewire" />
+                <TechItem icon={SiBootstrap} name="Boostrap" />
+                <TechItem icon={SiLinux} name="Linux" />
+                <TechItem icon={SiHtml5} name="HTML5" />
+                <TechItem icon={SiRaspberrypi} name="Raspberry Pi" />
             </div>
 
             <h2 className="font-medium text-3xl mb-4">Projects 🛠️</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-6">
                 In my free time, I enjoy creating open source projects on{" "}
                 <a
-                    href="https://github.com/cnrad"
+                    href="https://github.com/bitress"
                     rel="noreferrer"
                     className="font-semibold text-violet-500 hover:underline"
                 >
@@ -110,15 +115,39 @@ const Index = ({ stats, topRepos }: AppProps) => {
 };
 
 export async function getStaticProps() {
-    const stats = await fetch(`https://api.github-star-counter.workers.dev/user/cnrad`).then(res => res.json());
-    const repos = await fetch(`https://api.github.com/users/cnrad/repos?type=owner&per_page=100`).then(res =>
-        res.json()
-    );
+    const stats = await fetch(`https://api.github-star-counter.workers.dev/user/bitress`).then(res => res.json());
 
-    const topRepos = repos
-        .sort((a: Record<string, any>, b: Record<string, any>) => b.stargazers_count - a.stargazers_count)
-        .slice(0, 4);
-
+    const topRepos = [
+        {
+            name: "ebasura-backend",
+            description: "Backend API for the E-Basura waste segregation system",
+            stargazers_count: 0,
+            forks_count: 0,
+            language: "Python",
+        },
+        {
+            name: "vaxkid",
+            description: "An efficient system for electronically converting paper-based children's records to Rural Health Unit.",
+            stargazers_count: 0,
+            forks_count: 0,
+            language: "PHP",
+        },
+        {
+            name: "rental-wifi-payment-gateway",
+            description: "The Rental WiFi Portal is a payment gateway portal for TP-Link EAP-245 that integrates PayMongo API. ",
+            stargazers_count: 0,
+            forks_count: 0,
+            language: "PHP",
+        },
+        {
+            name: "ispsc-website",
+            description: "Created School Website for ISPSC",
+            stargazers_count: 18,
+            forks_count: 3,
+            language: "HTML",
+        },
+    ];
+    
     return {
         props: { stats, topRepos },
         revalidate: 3600,
