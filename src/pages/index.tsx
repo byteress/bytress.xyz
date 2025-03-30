@@ -52,7 +52,7 @@ const Index = ({ stats, topRepos }: AppProps) => {
 
             <h2 className="font-medium text-3xl mb-4">What I Do 💭</h2>
             <p className="text-gray-800 dark:text-gray-300 leading-6 font-light tracking-wide mb-12">
-            I'm passionate about technology, particularly in IoT, machine learning, and software development. From designing and building smart systems to integrating AI-driven solutions, I enjoy exploring how hardware and software interact to solve real-world problems.
+            I'm passionate about technology, particularly in web development, IoT, machine learning, and software development. From designing and building smart systems to integrating AI-driven solutions, I enjoy exploring how hardware and software interact to solve real-world problems.
             Beyond my projects, I'm constantly learning—whether it is backend systems, or embedded programming—to better understand how and why technology works the way it does.
             </p>
 
