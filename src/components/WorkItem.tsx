@@ -2,7 +2,22 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
-const WorkItem = ({ project, index, viewMode = "card" }) => {
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  github?: string;
+  liveDemo?: string;
+}
+
+interface WorkItemProps {
+  project: Project;
+  index: number;
+  viewMode?: "card" | "list";
+}
+
+
+const WorkItem: React.FC<WorkItemProps> = ({ project, index, viewMode = "card" }) => {
   if (!project) {
     return null; 
   }
