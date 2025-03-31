@@ -3,11 +3,13 @@ import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 interface Project {
-  id: string;
-  title: string;
+  id: number;
+  name: string;
+  languages: string[];
+  image: string;
   description: string;
   github?: string;
-  liveDemo?: string;
+  preview?: string;
 }
 
 interface WorkItemProps {
@@ -18,9 +20,7 @@ interface WorkItemProps {
 
 
 const WorkItem: React.FC<WorkItemProps> = ({ project, index, viewMode = "card" }) => {
-  if (!project) {
-    return null; 
-  }
+  if (!project) return null;
 
   const container = {
     hidden: { opacity: 0 },
@@ -38,7 +38,7 @@ const WorkItem: React.FC<WorkItemProps> = ({ project, index, viewMode = "card" }
     show: { y: 0, opacity: 1 }
   };
 
-  const imageSrc = project.image || "https://via.placeholder.com/300?text=No+Image";
+  const imageSrc = project.image || "https://fakeimg.pl/600x400?text=no+image+found";
 
   // Card View
   if (viewMode === "card") {

@@ -1,20 +1,22 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 
 const TimeStatus = () => {
     const [time, setTime] = useState<string>("00:00:00 p.m.");
     const [awake, setAwake] = useState<boolean>(true);
 
-    function updateTime() {
+    const updateTime = useCallback(() => {
         let current = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
         setTime(`${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`);
-        setTimeout(updateTime, 60 * 1000);
 
-        if (new Date().getHours() < 7) setAwake(false);
-    }
+        setAwake(new Date().getHours() >= 7);
+    }, []);
 
     useEffect(() => {
         updateTime();
-    }, []);
+        const interval = setInterval(updateTime, 60 * 1000); // Run updateTime every minute
+
+        return () => clearInterval(interval); // Cleanup on unmount
+    }, [updateTime]);
 
     return (
         <p className="text-black/50 dark:text-white/50 text-sm mb-10">
