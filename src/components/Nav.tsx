@@ -146,6 +146,12 @@ const Nav = () => {
                                     onClick={() => setMenuOpen(false)}
                                 />
                                 <MobileLandingButton
+                                    name="Works"
+                                    link="/works"
+                                    selected={router.pathname === "/works"}
+                                    onClick={() => setMenuOpen(false)}
+                                />
+                                <MobileLandingButton
                                     name="Contact"
                                     link="/contact"
                                     selected={router.pathname === "/contact"}
@@ -155,19 +161,15 @@ const Nav = () => {
 
                             <div className="flex flex-row items-center justify-center gap-6 py-4">
                                 <LinkButton
-                                    href={"https://github.com/cnrad"}
+                                    href={"https://github.com/bitress"}
                                     icon={<SiGithub className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"https://twitter.com/notcnrad"}
-                                    icon={<SiTwitter className="w-6 h-6 cursor-pointer" />}
-                                />
-                                <LinkButton
-                                    href={"https://linkedin.com/in/cnrad"}
+                                    href={"https://linkedin.com/in/itscyanne"}
                                     icon={<SiLinkedin className="w-6 h-6 cursor-pointer" />}
                                 />
                                 <LinkButton
-                                    href={"mailto:hello@cnrad.dev"}
+                                    href={"mailto:cyannejustinvega@pm.me"}
                                     icon={<FiMail className="w-6 h-6 cursor-pointer" />}
                                 />
                             </div>
