@@ -5,7 +5,7 @@ const TimeStatus = () => {
     const [awake, setAwake] = useState<boolean>(true);
 
     const updateTime = useCallback(() => {
-        let current = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+        let current = new Date().toLocaleString("en-US", { timeZone: "Asia/Manila" });
         setTime(`${current.slice(-11, -6)}${current.slice(-3, -1)}.M.`);
 
         setAwake(new Date().getHours() >= 7);

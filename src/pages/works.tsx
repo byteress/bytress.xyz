@@ -67,11 +67,20 @@ const projects = [
   },
   {
     id: 7,
-    name: "Hydroponics Monitoring System",
+    name: "Aquaphonics",
     description: "An AI-powered system that integrates YOLO for detecting lettuce plants and XGBoost for classifying their health. This project helps hydroponic farmers monitor plant conditions in real-time, optimizing growth and preventing diseases.",
     languages: ["Python", "TensorFlow", "OpenCV", "XGBoost", "YOLO"],
     image: "",
     github: "",
+    preview: "",
+  },
+  {
+    id: 8,
+    name: "AgriServe",
+    description: "A web-based farmer information management system.",
+    languages: ["PHP", "MySQL"],
+    image: "https://raw.githubusercontent.com/bitress/agriserve/refs/heads/main/img/agrilogo.png",
+    github: "https://github.com/bitress/agriserve",
     preview: "",
   },
 ];

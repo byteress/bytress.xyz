@@ -76,6 +76,7 @@ const Nav = () => {
                 <div className="flex flex-row items-center justify-between gap-2">
                     <ThemeToggle />
                     <LandingButton name="Home" link="/" selected={router.pathname === "/"} />
+                    {/* <LandingButton name="Resume" link="/resume" selected={router.pathname === "/resume"} /> */}
                     <LandingButton name="Works" link="/works" selected={router.pathname === "/works"} />
                     <LandingButton name="Contact" link="/contact" selected={router.pathname === "/contact"} />
                 </div>
